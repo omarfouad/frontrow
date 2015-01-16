@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Frontrow</title>
+	<link rel="stylesheet" href="../dist/frontrow.css">
+	<style>
+		#local {display: none;}
+		p {color: #97B145;}
+	</style>
+</head>
+<body>
+	<button id="launchModal">Click here to launch a modal.</button>
+	<button id="another">Click here to launch another modal.</button>
+	
+	<div id="local">
+		<p>
+			It works like a charm.
+		</p>
+	</div>
+
+	<script src="../dist/frontrow.js"></script>
+
+	<script>
+		var a = frontrow('launchModal', {content: '#local', title: 'Welcome!'});
+		var b = frontrow('another', {title: 'Another modal!'});
+		console.log(a,b);
+	</script>
+</body>
+</html>

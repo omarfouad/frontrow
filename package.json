@@ -1,0 +1,42 @@
+{
+  "name": "frontrow",
+  "version": "0.1.3",
+  "description": "Customizable modals for the humanity",
+  "main": "src/js/frontrow.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omarfouad/frontrow"
+  },
+  "author": {
+    "name": "Omar Fouad",
+    "email": "me@omarfouad.com",
+    "url": "http://omarfouad.com"
+  },
+  "keywords": [
+    "modal",
+    "popup",
+    "modal window"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omarfouad/frontrow/issues"
+  },
+  "homepage": "https://github.com/omarfouad/frontrow",
+  "devDependencies": {
+    "browserify": "^8.1.0",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-minify-css": "^0.3.12",
+    "gulp-rename": "^1.2.0",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-ruby-sass": "~0.4.3",
+    "gulp-uglify": "^1.0.2",
+    "gulp-util": "^3.0.2",
+    "jshint-stylish": "^1.0.0",
+    "run-sequence": "^1.0.2",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^2.2.1"
+  },
+  "dependencies": {}
+}
