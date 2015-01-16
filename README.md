@@ -1,6 +1,6 @@
 # frontrow
 
-> Customizable modals for the humanity
+> Customizable modals for the humanity. No jQuery required and no dependencies.
 
 ## Install
 
@@ -10,7 +10,7 @@ From npm
 npm install --save frontrow
 ```
 
-or manually
+or manually (from the dist folder)
 
 ```html
 <link rel="stylesheet" href="frontrow.min.css">
