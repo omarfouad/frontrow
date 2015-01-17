@@ -1,11 +1,11 @@
 'use strict';
 
-var find = require('./find');
+var core = require('./core');
 var defaults = require('./defaults');
 
 function frontrow(elem, options) {
 	var ops = options ? defaults(options) : defaults({});
-	return find(elem, ops);
+	core.find(elem, ops);
 }
 
 module.exports = frontrow;

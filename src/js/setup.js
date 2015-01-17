@@ -1,7 +1,6 @@
 'use strict';
 
 var loadFrom = require('./content');
-var ev = require('./event');
 
 function setup (modal, options) {
 	modal.querySelector('#frow-header').innerHTML = options.title;
@@ -10,9 +9,16 @@ function setup (modal, options) {
 	modal.querySelector('#frow-overlay').style.backgroundColor = options.overlayColor;
 	modal.querySelector('#frow-overlay').style.opacity = options.overlayOpacity;
 	modal.querySelector('#frow-body').innerHTML = loadFrom.local(options.content);
-	modal.querySelector('#frow-container').style.maxWidth = options.width;
+	if (options.width === 'auto') {
+		modal.querySelector('#frow-container').style.maxWidth = 'none';
+		modal.querySelector('#frow-container').style.width = 'inherit';
+	}else{
+		modal.querySelector('#frow-container').style.maxWidth = options.width;
+	}
 	modal.querySelector('#frow-body').style.height = options.height;
-	ev.click(modal.querySelector('#frow-ok-btn'), options.confirmCallback);
+	modal.click(modal.querySelector('#frow-ok-btn'), options.confirmCallback);
+
+	return modal;
 }
 
 module.exports = setup;

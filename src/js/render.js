@@ -3,14 +3,12 @@
 var ev = require('./event');
 
 function render () {
-	dispose();
-
 	var body = document.querySelector('body');
 	var wrapper = document.createElement('div');
 	var overlay = document.createElement('div');
 	var container = document.createElement('div');
 	var content = document.createElement('div');
-	var closeButton = document.createElement('a');
+	var closeButton = document.createElement('div');
 	var header = document.createElement('div');
 	var theBody = document.createElement('div');
 	var footer = document.createElement('div');
@@ -40,21 +38,53 @@ function render () {
 	footer.appendChild(cancelBtn);
 	body.appendChild(wrapper);
 
-	theBody.innerHTML = '<div>No content yet. (But it works!)</div>';
+	theBody.innerHTML = '<div>Hello World!</div>';
 
-	ev.click(closeButton, dispose);
-	ev.click(cancelBtn, dispose);
-	ev.click(overlay, dispose);
+	ev.click(closeButton, dispose.bind(wrapper));
+	ev.click(cancelBtn, dispose.bind(wrapper));
+	ev.click(overlay, dispose.bind(wrapper));
 
-	body.style.overflow = 'hidden';
-
+	show(wrapper);
 	return wrapper;
 }
 
+function show(modal) {
+	setTimeout(function() {
+		modal.style.opacity = 1;
+		document.querySelector('body').style.overflow = 'hidden';
+	}, 10);
+}
+
 function dispose () {
-	var el = document.querySelector('#frow-wrapper');
-	if (el) { el.parentNode.removeChild(el); }
+	var modal = this;
+	modal.style.opacity = 0.0;
 	document.querySelector('body').style.overflow = 'scroll';
+	setTimeout(function() {
+		modal.parentNode.removeChild(modal);
+	}, 250);
 }
 
 module.exports = render;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

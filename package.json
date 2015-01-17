@@ -1,6 +1,6 @@
 {
   "name": "frontrow",
-  "version": "0.1.31",
+  "version": "0.2.0",
   "description": "Customizable modals for the humanity",
   "main": "src/js/frontrow.js",
   "repository": {
@@ -38,5 +38,7 @@
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    
+  }
 }

@@ -1,6 +1,12 @@
+_Version 0.2.0_
+
 # frontrow
 
 > Customizable modals for the humanity. No jQuery required and no dependencies.
+
+# Demo
+
+Coming in a while!
 
 ## Install
 
@@ -28,11 +34,11 @@ Option              | Description
 `title`             | The title of the modal which appears in its header
 `confirmBtnText`    | The text of the confirm button. Defaults to `'Confirm'`
 `cancelBtnText`     | The text inside the cancel link. Defaults to `'cancel'`
-`confirmCallback`   | The callback function that executes when the confirm button is clicked
+`confirmCallback`   | The callback function that executes when the confirm button is clicked. Defaults to `function () {}`
 `overlayColor`      | The CSS color property of the overlay behind the modal. Defaults to `'white'`
 `overlayOpacity`    | The CSS opacity property of the overlay behind the modal. Defaults to `0.8`
 `content`           | The selector of the DOM element (inner) that will be rendered in the modal's body
-`width`             | The width of the modal. If `'none'` is passed, it will take the entire page's width. Defaults to `'300px'`
+`width`             | The width of the modal. If set to `'none'`, it will take the entire page's width. If set to `'auto'`, the modal will take the width of the content. Defaults to `'300px'`
 `height`            | The height of the modal. If none is specified, it will automatically set itself to fit the content of the modal. If specified, a vertical scrollbar will appear **only** if there is not enough room for the content
 
 More options will be added soon.

@@ -1,30 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Frontrow</title>
-	<link rel="stylesheet" href="../dist/frontrow.css">
-	<style>
-		#local {display: none;}
-		p {color: #97B145;}
-	</style>
+  <meta charset="UTF-8">
+  <title>Frontrow</title>
+  <link rel="stylesheet" href="../dist/frontrow.css">
+  <link rel="stylesheet" href="example.css">
 </head>
 <body>
-	<button id="launchModal">Click here to launch a modal.</button>
-	<button id="another">Click here to launch another modal.</button>
-	
-	<div id="local">
-		<p>
-			It works like a charm.
-		</p>
-	</div>
+  
+  <h1 class="center">Frontrow</h1>
+  <section class="center">
+    <strong>Customizable modals for the humanity. No jQuery required and no dependencies.</strong>
+  </section>
 
-	<script src="../dist/frontrow.js"></script>
+  <section>
+    <h2>Launch a basic modal</h2>
+    <button class="btn" id="basic">Launch</button>  
+    <pre><code>
+frontrow('basic');
+&lt;button class=&quot;btn&quot; id=&quot;basic&quot;&gt;Launch&lt;/button&gt; <br>
+    </code></pre>
+  </section>
 
-	<script>
-		var a = frontrow('launchModal', {content: '#local', title: 'Welcome!'});
-		var b = frontrow('another', {title: 'Another modal!'});
-		console.log(a,b);
-	</script>
+  <section>
+    <h2>Set a title?</h2>
+    <button class="btn" id="theatre">Launch</button>  
+    <pre><code>
+frontrow('theatre', {title: "To the theatre!"});
+&lt;button class=&quot;btn&quot; id=&quot;theatre&quot;&gt;Launch&lt;/button&gt; <br>
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Your modal, your content</h2>
+    <button class="btn" id="beach">Launch</button>  
+    <pre><code>
+frontrow('beach', {
+  title: "To the beach!", 
+  content: "#content", 
+  width: "auto"
+});
+&lt;button class=&quot;btn&quot; id=&quot;beach&quot;&gt;Launch&lt;/button&gt; <br>
+&lt;div id=&quot;content&quot; style=&quot;display: none;&quot;&gt;
+  &lt;div&gt;
+    &lt;h4&gt;By the sea&lt;/h4&gt;
+    &lt;img src=&quot;the_beach.jpg&quot;&gt;
+  &lt;div&gt;
+&lt;div&gt;
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Let's change the overlay color!</h2>
+    <button class="btn" id="cinema">Launch</button> 
+    <pre><code>
+frontrow('cinema', {title: "To the cinema!", overlayColor: "#bada55"});
+&lt;button class=&quot;btn&quot; id=&quot;cinema&quot;&gt;Launch&lt;/button&gt; <br>
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Less transparent overlay</h2>
+    <button class="btn" id="park">Launch</button> 
+    <pre><code>
+frontrow('park', {
+  title: "To the park!", 
+  overlayColor: "#bada55", 
+  overlayOpacity: 1
+});
+&lt;button class=&quot;btn&quot; id=&quot;park&quot;&gt;Launch&lt;/button&gt; <br>
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Personalize</h2>
+    <button class="btn" id="museum">Launch</button> 
+    <pre><code>
+frontrow('museum', {title: "To the museum!",
+  overlayColor: "#bada55",
+  overlayOpacity: 1,
+  confirmBtnText: "Let's do it!",
+  cancelBtnText: "later"
+});
+&lt;button class=&quot;btn&quot; id=&quot;museum&quot;&gt;Launch&lt;/button&gt; <br>
+    </code></pre>
+  </section>
+
+  <section class='center'>
+    <strong>And much more!</strong>
+    <p>
+      <a href="https://github.com/omarfouad/frontrow/blob/master/README.md">Read the docs on github</a>
+    </p>
+  </section>
+
+
+  <div id="content" style="display: none;">
+    <div>
+      <h4>By the sea</h4>
+      <img src="the_beach.jpg">
+    </div>
+  </div>
+
+
+
+  <a href="https://github.com/omarfouad/frontrow"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+  <script src="../dist/frontrow.js"></script>
+  <script>
+  frontrow('basic');
+  frontrow('theatre', {title: "To the theatre!"});
+  frontrow('beach', {title: "To the beach!", content: "#content", width: "auto"});
+  frontrow('cinema', {title: "To the cinema!", overlayColor: "#bada55"});
+  frontrow('park', {title: "To the park!", overlayColor: "#bada55", overlayOpacity: 1});
+  frontrow('museum', {title: "To the park!", overlayColor: "#bada55", overlayOpacity: 1, confirmBtnText: "Let's do it!", cancelBtnText: "later"});
+  </script>
 </body>
 </html>

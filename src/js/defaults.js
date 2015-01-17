@@ -10,7 +10,7 @@ function defaults(options) {
 		content: options.content || '#frow-body',
 		width: options.width || '300px',
 		height: options.height || null,
-		confirmCallback: options.confirmCallback || null
+		confirmCallback: options.confirmCallback || function() {}
 	};
 	return ops;
 }
