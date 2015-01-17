@@ -1,4 +1,4 @@
-# 0.2.1 Velvet Chair
+# 0.2.2 Velvet Chair
 
 - Modals now center themselves using JavaScript
 - Added fade transition
