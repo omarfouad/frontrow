@@ -1,4 +1,4 @@
-_Version 0.2.0_
+_Version 0.2.2_
 
 # frontrow
 

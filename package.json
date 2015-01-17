@@ -1,6 +1,6 @@
 {
   "name": "frontrow",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Customizable modals for the humanity",
   "main": "src/js/frontrow.js",
   "repository": {
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/omarfouad/frontrow/issues"
   },
-  "homepage": "https://github.com/omarfouad/frontrow",
+  "homepage": "http://omarfouad.github.io/frontrow",
   "devDependencies": {
     "browserify": "^8.1.0",
     "gulp": "^3.8.10",
