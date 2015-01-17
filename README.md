@@ -4,9 +4,8 @@ _Version 0.2.0_
 
 > Customizable modals for the humanity. No jQuery required and no dependencies.
 
-# Demo
-
-Coming in a while!
+## Demo
+See a [simple live demo here!](http://omarfouad.github.io/frontrow/)
 
 ## Install
 
