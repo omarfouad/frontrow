@@ -59,7 +59,7 @@ gulp
 Lastly open the page and any changes you make just need a browser refresh.
 
 ```shell
-open example/index.html
+open index.html
 ```
 
 ## License

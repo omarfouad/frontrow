@@ -20,7 +20,7 @@ gulp.task('js', function() {
 		cache: {},
 		packageCache: {},
 		fullPaths: false,
-		debug: true,
+		debug: false,
 		standalone: 'frontrow'
 	});
 
