@@ -1,3 +1,8 @@
+# 0.3.0 Lazy boy
+
+- Added the `frontrow.dispose()` method
+- Improvements and bug fixes
+
 # 0.2.2 Velvet Chair
 
 - Modals now center themselves using JavaScript

@@ -1,5 +1,7 @@
 'use strict';
 
+var dispose = require('./dispose');
+
 function defaults(options) {
 	var ops = {
 		title: options.title || 'Frontrow!',
@@ -10,7 +12,7 @@ function defaults(options) {
 		content: options.content || '#frow-body',
 		width: options.width || '300px',
 		height: options.height || null,
-		confirmCallback: options.confirmCallback || function() {}
+		confirmCallback: options.confirmCallback || dispose
 	};
 	return ops;
 }

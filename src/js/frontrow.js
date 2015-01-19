@@ -1,11 +1,8 @@
 'use strict';
 
 var core = require('./core');
-var defaults = require('./defaults');
+var dispose = require('./dispose');
 
-function frontrow(elem, options) {
-	var ops = options ? defaults(options) : defaults({});
-	core.find(elem, ops);
-}
+core.dispose = dispose;
 
-module.exports = frontrow;
+module.exports = core;
