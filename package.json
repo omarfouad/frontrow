@@ -1,6 +1,6 @@
 {
   "name": "frontrow",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Customizable modals for the humanity",
   "main": "src/js/frontrow.js",
   "repository": {

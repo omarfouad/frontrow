@@ -1,6 +1,7 @@
 'use strict';
 
 var loadFrom = require('./content');
+var events = require('./events');
 
 function setup (modal, options) {
 	modal.querySelector('#frow-header').innerHTML = options.title;
@@ -16,7 +17,7 @@ function setup (modal, options) {
 		modal.querySelector('#frow-container').style.maxWidth = options.width;
 	}
 	modal.querySelector('#frow-body').style.height = options.height;
-	modal.click(modal.querySelector('#frow-ok-btn'), options.confirmCallback);
+	events.add(modal.querySelector('#frow-ok-btn'), 'click', options.confirmCallback);
 
 	return modal;
 }

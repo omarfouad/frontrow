@@ -1,6 +1,7 @@
 'use strict';
 
-var ev = require('./event');
+var events = require('./events');
+var dispose = require('./dispose');
 
 function render () {
 	var body = document.querySelector('body');
@@ -40,9 +41,9 @@ function render () {
 
 	theBody.innerHTML = '<div>Hello World!</div>';
 
-	ev.click(closeButton, dispose.bind(wrapper));
-	ev.click(cancelBtn, dispose.bind(wrapper));
-	ev.click(overlay, dispose.bind(wrapper));
+	events.add(closeButton, 'click', dispose);
+	events.add(cancelBtn, 'click', dispose);
+	events.add(overlay, 'click', dispose);
 
 	show(wrapper);
 	return wrapper;
@@ -53,15 +54,6 @@ function show(modal) {
 		modal.style.opacity = 1;
 		document.querySelector('body').style.overflow = 'hidden';
 	}, 10);
-}
-
-function dispose () {
-	var modal = this;
-	modal.style.opacity = 0.0;
-	document.querySelector('body').style.overflow = 'scroll';
-	setTimeout(function() {
-		modal.parentNode.removeChild(modal);
-	}, 250);
 }
 
 module.exports = render;

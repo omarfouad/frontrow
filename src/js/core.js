@@ -1,16 +1,17 @@
 'use strict';
 
-var ev = require('./event');
+var events = require('./events');
 var render = require('./render');
 var setup = require('./setup');
 var position = require('./position');
+var defaults = require('./defaults');
 
-function find(el, ops) {
+function core(elem, options) {
 	var element = {};
-	element.el = document.querySelector('#' + el);
-	element.options = ops;
+	element.el = document.querySelector('#' + elem);
+	element.options = options ? defaults(options) : defaults({});
 
-	ev.click(element.el, init.bind(element));
+	events.add(element.el, 'click', init.bind(element));
 }
 
 function init() {
@@ -19,6 +20,4 @@ function init() {
 	position(modal);
 }
 
-module.exports = {
-	find: find
-};
+module.exports = core;

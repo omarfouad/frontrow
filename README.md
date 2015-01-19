@@ -1,4 +1,4 @@
-_Version 0.2.2_
+_Version 0.3.0_
 
 # frontrow
 
@@ -33,7 +33,7 @@ Option              | Description
 `title`             | The title of the modal which appears in its header
 `confirmBtnText`    | The text of the confirm button. Defaults to `'Confirm'`
 `cancelBtnText`     | The text inside the cancel link. Defaults to `'cancel'`
-`confirmCallback`   | The callback function that executes when the confirm button is clicked. Defaults to `function () {}`
+`confirmCallback`   | The callback function that executes when the confirm button is clicked. Defaults to `frontrow.dispose()` thus, closes the modal
 `overlayColor`      | The CSS color property of the overlay behind the modal. Defaults to `'white'`
 `overlayOpacity`    | The CSS opacity property of the overlay behind the modal. Defaults to `0.8`
 `content`           | The selector of the DOM element (inner) that will be rendered in the modal's body
@@ -41,6 +41,12 @@ Option              | Description
 `height`            | The height of the modal. If none is specified, it will automatically set itself to fit the content of the modal. If specified, a vertical scrollbar will appear **only** if there is not enough room for the content
 
 More options will be added soon.
+
+## API
+
+### frontrow.dispose()
+
+This method will remove the current modal from the DOM.
 
 ## Development
 
