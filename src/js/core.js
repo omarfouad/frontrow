@@ -1,23 +1,31 @@
 'use strict';
 
 var events = require('./events');
-var render = require('./render');
-var setup = require('./setup');
-var position = require('./position');
 var defaults = require('./defaults');
+var modal = require('./modal');
+var index = require('./index');
+var nope;
 
 function core(elem, options) {
-	var element = {};
-	element.el = document.querySelector('#' + elem);
-	element.options = options ? defaults(options) : defaults({});
+	var el = document.querySelector('#' + elem);
+	if(el === null) {
+		return;
+	}
 
-	events.add(element.el, 'click', init.bind(element));
-}
+	var exists = index.find(el);
+	if (exists !== nope) {
+		return;
+	}
 
-function init() {
-	var modal = render();
-	setup(modal, this.options);
-	position(modal);
+	var instance;
+	var ops = options ? defaults(options) : defaults({});
+
+	instance = modal(el, ops);
+	instance.identifier = index.add(el, instance);
+
+	events.add(instance.el, 'click', instance.show);
+
+	return instance;
 }
 
 module.exports = core;

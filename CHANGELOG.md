@@ -1,3 +1,9 @@
+# 1.0.0 First Class
+
+- Creating a modal using `frontrow(elem, options)` return now an instance of `modal`
+- Instances of `modal` exposes an simple API
+- Bug fixes
+
 # 0.3.0 Lazy boy
 
 - Added the `frontrow.dispose()` method

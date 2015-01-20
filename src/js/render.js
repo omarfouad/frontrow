@@ -2,8 +2,9 @@
 
 var events = require('./events');
 var dispose = require('./dispose');
+var key = 'data-frontrow-id';
 
-function render () {
+function render (identifier) {
 	var body = document.querySelector('body');
 	var wrapper = document.createElement('div');
 	var overlay = document.createElement('div');
@@ -17,6 +18,7 @@ function render () {
 	var cancelBtn = document.createElement('div');
 
 	wrapper.setAttribute('id', 'frow-wrapper');
+	wrapper.setAttribute(key, identifier);
 	overlay.setAttribute('id', 'frow-overlay');
 	container.setAttribute('id', 'frow-container');
 	content.setAttribute('id', 'frow-content');

@@ -1,4 +1,4 @@
-_Version 0.3.0_
+_Version 1.0.0_
 
 # frontrow
 
@@ -44,9 +44,46 @@ More options will be added soon.
 
 ## API
 
+When you create a modal using `frontrow(elem, options)`, an instance of `modal` is returned. This instance exposes a few methods which you can use to manipulate the actual modal before/after is rendered.
+
+### .show()
+
+This allows you to render and show a modal without clicking on the associated button:
+
+```js
+<button id="myModal">Launch Modal</button>
+
+var modal = frontrow('myModal');
+modal.show(); // Shows the modal
+```
+
+### .set(option, value)
+
+This sets the value of one of the options to the instance. If the `modal` is showing already, the options are set on the fly.
+You can use any of the [options in the table above](#usage).
+
+```js
+<button id="myModal">Launch Modal</button>
+
+var modal = frontrow('myModal', {title: 'Hello World!'});
+modal.set('title', 'Another Title!');
+modal.show(); // Shows the modal with the new title
+modal.set('title', 'Changed again'); // switches the title on the fly
+modal.set('overlayColor', 'red'); // Switches the overlay color on the fly
+```
+
+## Other functions
+
 ### frontrow.dispose()
 
-This method will remove the current modal from the DOM.
+This method will remove the current modal from the DOM. This will not need an instance because
+
+## Roadmap
+
+#### Soon:
+- Load content from a remote HTML file (AJAX)
+- Add styling API
+- Suggest new stuff
 
 ## Development
 

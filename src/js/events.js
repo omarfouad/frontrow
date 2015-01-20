@@ -1,3 +1,8 @@
+/* 
+  Courtesy of Nicolas Bevacqua
+  github.com/bevacqua
+*/
+
 'use strict';
 
 var addEvent = addEventEasy;
