@@ -2,6 +2,9 @@ _Version 1.0.0_
 
 
 [![Code Climate](https://codeclimate.com/repos/55425e846956805770003704/badges/56df94ad5f8cef25549a/gpa.svg)](https://codeclimate.com/repos/55425e846956805770003704/feed)
+![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg)
+
+
 # frontrow
 
 > Customizable modals for the humanity. No jQuery required and no dependencies.
