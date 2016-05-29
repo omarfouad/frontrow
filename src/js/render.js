@@ -2,6 +2,7 @@
 
 var events = require('./events');
 var dispose = require('./dispose');
+var defaults = require('./defaults');
 var key = 'data-frontrow-id';
 
 function render (identifier) {

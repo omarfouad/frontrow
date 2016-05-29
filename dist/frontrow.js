@@ -24,6 +24,7 @@ function appearing() {
 }
 
 module.exports = appearing;
+
 },{}],3:[function(require,module,exports){
 'use strict';
 
@@ -35,6 +36,7 @@ var loadFrom = {
 };
 
 module.exports = loadFrom;
+
 },{}],4:[function(require,module,exports){
 'use strict';
 
@@ -82,12 +84,14 @@ function defaults(options) {
 		content: options.content || '#frow-body',
 		width: options.width || '300px',
 		height: options.height || null,
-		confirmCallback: options.confirmCallback || dispose
+		confirmCallback: options.confirmCallback || dispose,
+		openCallback: options.openCallback || function() {}
 	};
 	return ops;
 }
 
 module.exports = defaults;
+
 },{"./dispose":6}],6:[function(require,module,exports){
 'use strict';
 
@@ -105,7 +109,7 @@ function dispose() {
 
 module.exports = dispose;
 },{}],7:[function(require,module,exports){
-/* 
+/*
   Courtesy of Nicolas Bevacqua
   github.com/bevacqua
 */
@@ -149,6 +153,7 @@ module.exports = {
   add: addEvent,
   remove: removeEvent
 };
+
 },{}],8:[function(require,module,exports){
 'use strict';
 
@@ -184,7 +189,7 @@ function modal(elem, options) {
 
 	api.el = elem;
 	api.options = options;
-	
+
 	function show() {
 		if (appearing()) {
 			return;
@@ -214,6 +219,7 @@ function modal(elem, options) {
 }
 
 module.exports = modal;
+
 },{"./appearing":2,"./position":10,"./render":11,"./setup":12}],10:[function(require,module,exports){
 'use strict';
 
@@ -237,6 +243,7 @@ module.exports = position;
 
 var events = require('./events');
 var dispose = require('./dispose');
+var defaults = require('./defaults');
 var key = 'data-frontrow-id';
 
 function render (identifier) {
@@ -318,7 +325,7 @@ module.exports = render;
 
 
 
-},{"./dispose":6,"./events":7}],12:[function(require,module,exports){
+},{"./defaults":5,"./dispose":6,"./events":7}],12:[function(require,module,exports){
 'use strict';
 
 var loadFrom = require('./content');
@@ -343,13 +350,16 @@ function setup (options) {
 	}else{
 		modal.querySelector('#frow-container').style.maxWidth = options.width;
 	}
-	
+
 	modal.querySelector('#frow-body').style.height = options.height;
 	events.add(modal.querySelector('#frow-ok-btn'), 'click', options.confirmCallback);
+
+	options.openCallback()
 
 	return modal;
 }
 
 module.exports = setup;
+
 },{"./content":3,"./events":7}]},{},[1])(1)
 });

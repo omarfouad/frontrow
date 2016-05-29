@@ -12,7 +12,8 @@ function defaults(options) {
 		content: options.content || '#frow-body',
 		width: options.width || '300px',
 		height: options.height || null,
-		confirmCallback: options.confirmCallback || dispose
+		confirmCallback: options.confirmCallback || dispose,
+		openCallback: options.openCallback || function() {}
 	};
 	return ops;
 }

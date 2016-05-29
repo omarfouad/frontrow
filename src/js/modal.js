@@ -10,7 +10,7 @@ function modal(elem, options) {
 
 	api.el = elem;
 	api.options = options;
-	
+
 	function show() {
 		if (appearing()) {
 			return;

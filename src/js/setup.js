@@ -22,9 +22,11 @@ function setup (options) {
 	}else{
 		modal.querySelector('#frow-container').style.maxWidth = options.width;
 	}
-	
+
 	modal.querySelector('#frow-body').style.height = options.height;
 	events.add(modal.querySelector('#frow-ok-btn'), 'click', options.confirmCallback);
+
+	options.openCallback()
 
 	return modal;
 }

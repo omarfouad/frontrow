@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="example/example.css">
 </head>
 <body>
-  
+
   <h1 class="center">Frontrow</h1>
   <section class="center">
     <strong>Customizable modals for the humanity. No jQuery required and no dependencies.</strong>
@@ -15,7 +15,7 @@
 
   <section>
     <h2>Launch a basic modal</h2>
-    <button class="btn" id="basic">Launch</button>  
+    <button class="btn" id="basic">Launch</button>
     <pre><code>
 frontrow('basic');
 &lt;button class=&quot;btn&quot; id=&quot;basic&quot;&gt;Launch&lt;/button&gt; <br>
@@ -24,7 +24,7 @@ frontrow('basic');
 
   <section>
     <h2>Set a title?</h2>
-    <button class="btn" id="theatre">Launch</button>  
+    <button class="btn" id="theatre">Launch</button>
     <pre><code>
 frontrow('theatre', {title: "To the theatre!"});
 &lt;button class=&quot;btn&quot; id=&quot;theatre&quot;&gt;Launch&lt;/button&gt; <br>
@@ -33,11 +33,11 @@ frontrow('theatre', {title: "To the theatre!"});
 
   <section>
     <h2>Your modal, your content</h2>
-    <button class="btn" id="beach">Launch</button>  
+    <button class="btn" id="beach">Launch</button>
     <pre><code>
 frontrow('beach', {
-  title: "To the beach!", 
-  content: "#content", 
+  title: "To the beach!",
+  content: "#content",
   width: "auto"
 });
 &lt;button class=&quot;btn&quot; id=&quot;beach&quot;&gt;Launch&lt;/button&gt; <br>
@@ -52,7 +52,7 @@ frontrow('beach', {
 
   <section>
     <h2>Let's change the overlay color!</h2>
-    <button class="btn" id="cinema">Launch</button> 
+    <button class="btn" id="cinema">Launch</button>
     <pre><code>
 frontrow('cinema', {title: "To the cinema!", overlayColor: "#bada55"});
 &lt;button class=&quot;btn&quot; id=&quot;cinema&quot;&gt;Launch&lt;/button&gt; <br>
@@ -61,11 +61,11 @@ frontrow('cinema', {title: "To the cinema!", overlayColor: "#bada55"});
 
   <section>
     <h2>Less transparent overlay</h2>
-    <button class="btn" id="park">Launch</button> 
+    <button class="btn" id="park">Launch</button>
     <pre><code>
 frontrow('park', {
-  title: "To the park!", 
-  overlayColor: "#bada55", 
+  title: "To the park!",
+  overlayColor: "#bada55",
   overlayOpacity: 1
 });
 &lt;button class=&quot;btn&quot; id=&quot;park&quot;&gt;Launch&lt;/button&gt; <br>
@@ -74,7 +74,7 @@ frontrow('park', {
 
   <section>
     <h2>Personalize</h2>
-    <button class="btn" id="museum">Launch</button> 
+    <button class="btn" id="museum">Launch</button>
     <pre><code>
 frontrow('museum', {title: "To the museum!",
   overlayColor: "#bada55",
@@ -114,6 +114,9 @@ frontrow('museum', {title: "To the museum!",
     frontrow('cinema', {title: "To the cinema!", overlayColor: "#bada55"});
     frontrow('park', {title: "To the park!", overlayColor: "#bada55", overlayOpacity: 1});
     frontrow('museum', {title: "To the park!", overlayColor: "#bada55", overlayOpacity: 1, confirmBtnText: "Let's do it!", cancelBtnText: "later"});
+    function something() {
+    	console.log('calling...')
+    }
   </script>
 </body>
 </html>
