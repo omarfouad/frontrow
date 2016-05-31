@@ -1,6 +1,6 @@
 {
   "name": "frontrow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Customizable modals for the humanity",
   "main": "src/js/frontrow.js",
   "repository": {
@@ -39,6 +39,6 @@
     "watchify": "^2.2.1"
   },
   "dependencies": {
-    
+
   }
 }
